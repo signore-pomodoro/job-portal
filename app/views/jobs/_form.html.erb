@@ -1,0 +1,88 @@
+<%= form_with(model: job) do |form| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+        <% job.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      
+     <div class="card" style="width: 18rem;">
+     <div class="card-body">
+    <h5 class="card-title">Разместить вакансию</h5>
+    <p class="card-text">Размещение всех вакансий 
+    на сайте — бесплатное. Если у вас возникли трудности — напишите нам в Телеграме.</p>
+    <button type="button" class="btn btn-warning"> <a href='https://t.me/topkekeu' target='blank'>
+            СВЯЗАТЬСЯ</a> </button>
+     </div>
+     </div>
+
+      </div>
+
+  <div class="col-9"> 
+    <div class="field">
+    <p><b>Должность</b><p>
+    <%= form.text_field :title %>
+    </div>
+
+  <div class="field">
+    <p><b>Компания</b><p>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <p><b>Зарплата</b><p>
+    <%= form.number_field :salary %>  <b>Валюта</b>
+    <%= form.text_field :currency %>
+  </div>
+
+    <div class="field">
+   
+  </div>
+
+  <div class="field">
+    <p><b>Локация</b><p>
+    <%= form.text_field :location %>
+  </div>
+
+   <div class="field">
+    <p><b>Описание вакансии</b><p>
+    <%= form.rich_text_area :description %>
+  </div>
+
+  <div class="field">
+    <p><b>Уровень компетенции:</b><p>
+    <%= form.text_field :level %>
+  </div>
+
+  <div class="field">
+    <p><b>Тип занятости</b><p>
+    <%= form.text_field :format %>
+  </div>
+
+  <div class="field">
+  <p><b>Основной навык</b><p>
+    <%= form.text_field :skill %>
+  </div>
+
+  <div class="field">
+    <p><b>Контактная информация</b><p>
+    <%= form.text_area :contact %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</div>
+</div>
+

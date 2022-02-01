@@ -1,0 +1,28 @@
+<%= render partial: 'jobs/header' %> 
+      
+      <div class='container' >
+
+        <div class="col-md-12 bg-light p-3 border" text-align:left >
+          <div text-align: center>
+            <h3><%= @job.title %></h3>
+              <h4><span class="badge  bg-light text-dark"><%= @job.location %></span>
+              <span class="badge  bg-light text-dark"><%= @job.format %> </span>
+              <span class="badge bg-light text-dark"><%= @job.salary %> <%= @job.currency %> </span>
+              </h4>
+            <p><h4>Описание вакансии</h4><p>
+            <p><%= @job.description %></p>
+
+            <div> 
+            <p><h4>Контактная информация</h4><p>
+            <p><%= @job.contact %></p>
+          </div>
+<p>
+          <div class="buffer-top">
+            <%= link_to 'Изменить', edit_job_path(@job),
+              class: 'btn btn-light' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      
