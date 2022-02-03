@@ -1,24 +1,20 @@
-# README
+Доска объявлений о поиске работы в IT (без регистрации)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Фронтенд на bootscrap.
 
-Things you may want to cover:
+Версия 0.1
 
-* Ruby version
+Для запуска:
 
-* System dependencies
+1. Склонируйте репозиторий
+2. Зайдите в папку проекта и выполните команды:
+  
+bundle exec bundle
 
-* Configuration
+bundle exec rake db:migrate
 
-* Database creation
+3. Для корректной работы Bootstrap может понадобиться popper.js
 
-* Database initialization
+Команда для установки:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+yarn install popper.js
