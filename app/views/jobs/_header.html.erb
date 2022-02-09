@@ -1,13 +1,39 @@
-<div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/.." class="nav-link active" aria-current="page"><h4>Домой</h5></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><b>О проекте</b></a></li>      
-      </ul>
-    </header>
-  </div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col order-first">
+    <li><%= link_to 'Домой', root_path %></li>
+    </div>
+
+    <div class="col">
+    <% if employer_signed_in? %>
+      <li><%= link_to 'Выйти', destroy_employer_session_path,
+              method: :delete %></li>
+    <% else %>
+       <% unless applicant_signed_in? %>
+      <li><%= link_to 'Войти как работодатель', new_employer_session_path %></li>
+      <li><%= link_to 'Регистрация работодателя',
+              new_employer_registration_path %></li> 
+      <% end %>             
+    <% end %>
+    </div>
+
+    <div class="col order-last">
+    
+    <% if applicant_signed_in? %>
+      <li><%= link_to 'Выйти', destroy_applicant_session_path,
+              method: :delete %></li>
+    <% else %>
+      <% if not employer_signed_in? %> 
+      <li><%= link_to 'Войти как соискатель', new_applicant_session_path %></li>
+
+      <li><%= link_to 'Регистрация соискателя',
+              new_applicant_registration_path %></li>
+       <% end %>      
+    <% end %>
+    </div>
+    
 
 
-<div class="buffer-both">
- 
+</div>      
 </div>

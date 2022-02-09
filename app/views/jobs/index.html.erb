@@ -4,14 +4,12 @@
 <div align='center'>
 <h1>Вакансии для IT инженеров</h1>
 
-<div class="buffer-both">
-<%= link_to 'Зарегистрироваться', new_employer_registration_path, class: 'btn btn-warning .btn-lg' %>
-</div>
+<% if employer_signed_in? %>
 <p>
 <div>
   <%= link_to 'Создать вакансию', new_job_path, class: 'btn btn-warning .btn-lg' %>
 </div>
-
+<% end %>
 <p>
 <div class="row buffer-bottom">
   <%= render partial: 'jobs/job', collection: @jobs %>
