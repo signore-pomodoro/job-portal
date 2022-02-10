@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :employers
   devise_for :applicants
+  devise_for :employers
 
   resources :jobs
   root "jobs#index"

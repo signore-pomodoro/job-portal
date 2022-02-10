@@ -5,6 +5,7 @@
 <h1>Вакансии для IT инженеров</h1>
 
 <% if employer_signed_in? %>
+Logged in as <strong><%= current_employer.email %></strong>.
 <p>
 <div>
   <%= link_to 'Создать вакансию', new_job_path, class: 'btn btn-warning .btn-lg' %>
@@ -14,5 +15,6 @@
 <div class="row buffer-bottom">
   <%= render partial: 'jobs/job', collection: @jobs %>
 </div>
+
 
 </div>
