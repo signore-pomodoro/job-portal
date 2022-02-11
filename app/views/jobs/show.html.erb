@@ -19,10 +19,12 @@
             <p><%= @job.contact %></p>
           </div>
 <p>
+          <% if current_employer_can_edit?(@job) %>
           <div class="buffer-top">
             <%= link_to 'Изменить', edit_job_path(@job),
               class: 'btn btn-light' %>
           </div>
+          <% end %>
         </div>
       </div>
     </div>
