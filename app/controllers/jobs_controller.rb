@@ -22,7 +22,7 @@ class JobsController < ApplicationController
   # POST /jobs or /jobs.json
   def create
     @job = Job.new(job_params)
-
+    @job.employer_id = current_employer.id 
     respond_to do |format|
       if @job.save
         format.html { redirect_to job_url(@job), notice: "Job was successfully created." }
@@ -66,6 +66,6 @@ class JobsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def job_params
       params.require(:job).permit(:title, :company, :location, :salary, 
-        :format,  :description, :level, :skill, :currency, :contact)
+        :format,  :description, :level, :skill, :currency, :contact, :employer_id)
     end
 end
