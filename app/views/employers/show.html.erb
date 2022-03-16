@@ -1,0 +1,21 @@
+<div class="text-center">
+  <h1><%= @employer.email %></h1>
+
+  <p class="buffer-top">
+  <%= link_to "Редактировать профиль", edit_employer_path(@employer),
+    class: 'btn btn-default' %>
+  </p>
+
+  <div class="row">
+  <div class="col-md-12">
+    <% if @employer.vacancies.any? %>
+      <h3>Разместил вакансии:</h3>
+      <div class="row">
+        <%= render partial: 'ощиы/ощи', collection: @employer.jobs %>
+      </div>
+    <% else %>
+      <p class="buffer-top">Работодатель пока не создал ни одной вакансии</p>
+    <% end %>
+  </div>
+</div>
+</div>
