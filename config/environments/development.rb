@@ -51,8 +51,8 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name:      ENV['development2023@bk.ru'],
-    password:       ENV['hwAVtRmpN3WAxK8'],
+    user_name:      ENV['test'],
+    password:       ENV['test'],
     domain:         ENV['localhost:3000'],
     address:       'smtp.mail.ru',
     port:          '465',
