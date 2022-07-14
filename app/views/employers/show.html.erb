@@ -11,7 +11,7 @@
     <% if @employer.vacancies.any? %>
       <h3>Разместил вакансии:</h3>
       <div class="row">
-        <%= render partial: 'ощиы/ощи', collection: @employer.jobs %>
+        <%= render partial: 'jobs/job', collection: @employer.jobs %>
       </div>
     <% else %>
       <p class="buffer-top">Работодатель пока не создал ни одной вакансии</p>

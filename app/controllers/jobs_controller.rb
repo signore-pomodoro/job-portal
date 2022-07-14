@@ -25,6 +25,7 @@ class JobsController < ApplicationController
     @job.employer_id = current_employer.id 
     respond_to do |format|
       if @job.save
+        JobCreatedEmail.perform_async
         format.html { redirect_to job_url(@job), notice: "Job was successfully created." }
         format.json { render :show, status: :created, location: @job }
       else

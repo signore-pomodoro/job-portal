@@ -6,4 +6,5 @@ class Employer < ApplicationRecord
          :confirmable
 
   has_many :jobs
+
 end

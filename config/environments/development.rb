@@ -33,8 +33,15 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
+  config.active_job.queue_adapter = :sidekiq
+
+  config.active_job.queue_adapter = :sidekiq
+
+  config.active_job.queue_name_prefix = "mysite"
+  
+  config.active_job.queue_name_delimiter = "_"
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -44,11 +51,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name:      ENV['SENDMAIL_USERNAME'],
-    password:       ENV['SENDMAIL_PASSWORD'],
-    domain:         ENV['MAIL_HOST'],
-    address:       'smtp.gmail.com',
-    port:          '587',
+    user_name:      ENV['development2023@bk.ru'],
+    password:       ENV['hwAVtRmpN3WAxK8'],
+    domain:         ENV['localhost:3000'],
+    address:       'smtp.mail.ru',
+    port:          '465',
     authentication: :plain,
     enable_starttls_auto: true
   }
