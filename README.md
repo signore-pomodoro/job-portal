@@ -13,7 +13,7 @@ bundle exec bundle
 
 bundle exec rake db:migrate
 
-3. В проекте используется БД PostgresQL. Перед запуском нужно настроить параметры базы данных данных, создав в папке config файл database.yml
+3. В проекте используется БД PostgreSQL. Перед запуском нужно настроить параметры базы данных данных, создав в папке config файл database.yml
 
 4. Для корректной работы Bootstrap может понадобиться popper.js
 
