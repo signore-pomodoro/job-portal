@@ -53,6 +53,8 @@ group :development do
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
+  gem "capistrano-secrets-yml"
+
 end
 
 group :test do
@@ -66,3 +68,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'telegram-bot-ruby'
+
+gem "stripe", "~> 7.1"
+gem "pay", "~> 5.0"

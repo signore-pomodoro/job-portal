@@ -11,6 +11,7 @@ module JobPortal
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.active_job.queue_adapter = :sidekiq 
+    config.action_mailer.default_url_options = { host: "http://localhost:3000" }
 
     # Configuration for the application, engines, and railties goes here.
     #

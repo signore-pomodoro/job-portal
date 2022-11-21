@@ -1,5 +1,5 @@
-
-  <div class="container">
+  
+<div class="container" style="text-align:center;">
   <div class="row">
     <div class="col order-first">
     <li><%= link_to 'Домой', root_path %></li>
@@ -32,8 +32,10 @@
        <% end %>      
     <% end %>
     </div>
-    
-
-
-</div>      
+  </div>      
 </div>
+
+  <div style="text-align:center;">
+  <%= link_to 'Создать вакансию', new_job_path, class: 'btn btn-warning .btn-lg' %>
+  <%= link_to 'Купить премиум', checkout_path, class: 'btn btn-light .btn-lg' %>
+  </div>

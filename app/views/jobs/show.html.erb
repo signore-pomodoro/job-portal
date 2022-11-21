@@ -1,11 +1,14 @@
-<%= render partial: 'jobs/header' %> 
+<%= render partial: 'employers/menu' %>
       
       <div class='container' >
+
+      <%= image_tag @job.image %>
 
         <div class="col-md-12 bg-light p-3 border" text-align:left >
           <div text-align: center>
             <h3><%= @job.title %></h3>
-            <b>Разместил работодатель: <%= @job.employer.email %></b>
+            <p>Разместил работодатель: <%= @job.employer.email %></p>
+            <p>Название компании: <%= @job.company %></p>
             <p>
               <h4><span class="badge  bg-light text-dark"><%= @job.location %></span>
               <span class="badge  bg-light text-dark"><%= @job.format %> </span>

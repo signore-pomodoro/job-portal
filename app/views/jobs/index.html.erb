@@ -1,14 +1,12 @@
-<%= render partial: 'jobs/header' %>
+<%= render partial: 'employers/menu' %>
 
-
-<div align='center'>
+<div style="text-align:center;">
 <h1>Вакансии для IT инженеров</h1>
 
 <% if employer_signed_in? %>
 Logged in as <strong><%= current_employer.email %></strong>.
 <p>
 <div>
-  <%= link_to 'Создать вакансию', new_job_path, class: 'btn btn-warning .btn-lg' %>
 </div>
 <% end %>
 <p>

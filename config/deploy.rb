@@ -2,6 +2,8 @@ server '23.111.121.212', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:signore-pomodoro/job-portal.git'
 set :application,     'jobportal'
+set :rvm_ruby_version, "ruby-3.0.0"
+set :default_env, { rvm_bin_path: "~/.rvm/bin" }
 
 # If using Digital Ocean's Ruby on Rails Marketplace framework, your username is 'rails'
 set :user,            'deploy'
