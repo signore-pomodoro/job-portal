@@ -22,3 +22,9 @@ bundle exec rake db:migrate
 yarn install popper.js
 
 5. Для работы фоновых задач нужно локально запустить сервер Redis.
+
+Когда все сделано, запускаем сервер 
+
+rails s
+
+и радуемся :)
